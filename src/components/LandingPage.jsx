@@ -1,7 +1,7 @@
 import { LuArrowUpRight } from "react-icons/lu";
 const LandingPage = () => {
     return (
-        <div className="w-full min-h-screen bg-zinc-900 pt-1">
+        <div className="w-full bg-zinc-900 pt-1">
             <div className="textStracture mt-40 px-[4vw] lg:px-20">
 
                 {['WE CREATE', 'EYE-OPENING', 'PRESENTATIONS'].map((item, index) => {
