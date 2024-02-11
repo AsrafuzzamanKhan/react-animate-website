@@ -1,13 +1,19 @@
+import { motion } from "framer-motion";
 import { LuArrowUpRight } from "react-icons/lu";
 const LandingPage = () => {
+
     return (
-        <div className="w-full bg-zinc-900 pt-1">
+        <div data-scroll data-scroll-section data-scroll-speed='-.3' className="w-full bg-zinc-900 pt-1">
             <div className="textStracture mt-40 px-[4vw] lg:px-20">
 
                 {['WE CREATE', 'EYE-OPENING', 'PRESENTATIONS'].map((item, index) => {
                     return <div key={index} className="masker">
                         <div className="w-fit flex items-center">
-                            {index === 1 && (<div className="w-[9vw] h-[5vw] bg-red-700 relative top-[1vw]"></div>)}
+                            {index === 1 && (<motion.div
+                                initial={{ width: 0 }}
+                                animate={{ width: '9vw' }}
+                                transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+                                className="w-[9vw] h-[5vw] bg-red-700 relative top-[1vw]"></motion.div>)}
                             <h1 className="uppercase  font-['Founders Grotesk'] leading-[7vw] tracking-tighter text-[9vw]">
                                 {item}
                             </h1>
